@@ -33,7 +33,7 @@ RUN uv pip install --system --no-cache .
 
 # Build the WhatsApp bridge
 WORKDIR /app/bridge
-RUN npm ci && npm run build
+RUN npm install && npm run build
 WORKDIR /app
 
 # Set up config directory permissions
